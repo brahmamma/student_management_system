@@ -5,7 +5,7 @@ var bodyparser=require('body-parser')
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended:true}))
 var jwt = require("jsonwebtoken");
-app.use(express.json()); // for parsing application/json
+app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
 var cors=require('cors');
 app.use(cors())

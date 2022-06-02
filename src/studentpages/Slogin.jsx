@@ -8,7 +8,7 @@ function Slogin(){
     const [originaldata,setoriginaldata]=React.useState([])
     const dummyData = () =>
    {
-       fetch('http://localhost:8000/get_dummy')
+       fetch('https://student-manageent-system-123.herokuapp.com/get_dummy')
        .then(res=> res.json())
        .then(data=>{
            console.log(data);
@@ -16,7 +16,7 @@ function Slogin(){
    }
    const originalData = () =>
    {
-       fetch('http://localhost:8000/get_original')
+       fetch('https://student-manageent-system-123.herokuapp.com/get_original')
        .then(res=> res.json())
        .then(data=>{console.log(data);
         setoriginaldata(data)})

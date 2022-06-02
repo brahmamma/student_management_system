@@ -72,7 +72,7 @@ const Dashboard = () => {
         
     }
     function handledelete(obj){
-        fetch(`http://localhost:8000/del_reg_request/${obj._id}`,{
+        fetch(`https://student-manageent-system-123.herokuapp.com/del_reg_request/${obj._id}`,{
             method:'DELETE',
             header:{
                 'Content-Type':'application/json'
@@ -81,7 +81,7 @@ const Dashboard = () => {
         
     }
     function handleapprove(obj){
-        fetch('http://localhost:8000/add_registers',{
+        fetch('https://student-manageent-system-123.herokuapp.com/add_registers',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -90,7 +90,7 @@ const Dashboard = () => {
         })
         .then(res=>res.json())
         .then((data)=>{
-            fetch(`http://localhost:8000/del_reg_request/${obj._id}`,{
+            fetch(`https://student-manageent-system-123.herokuapp.com/del_reg_request/${obj._id}`,{
             method:'DELETE',
             header:{
                 'Content-Type':'application/json'
@@ -102,7 +102,7 @@ const Dashboard = () => {
      )
     }
      function handleapprovecourse(obj){
-        fetch('http://localhost:8000/add_registerdcourses',{
+        fetch('https://student-manageent-system-123.herokuapp.com/add_registerdcourses',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -111,7 +111,7 @@ const Dashboard = () => {
         })
         .then(res=>res.json())
         .then((data)=>{
-            fetch(`http://localhost:8000/del_cou_reg_request/${obj._id}`,{
+            fetch(`https://student-manageent-system-123.herokuapp.com/del_cou_reg_request/${obj._id}`,{
             method:'DELETE',
             header:{
                 'Content-Type':'application/json'
@@ -124,7 +124,7 @@ const Dashboard = () => {
 
      } 
      function handledeletecourse(obj){
-        fetch(`http://localhost:8000/del_cou_reg_request/${obj._id}`,{
+        fetch(`https://student-manageent-system-123.herokuapp.com/del_cou_reg_request/${obj._id}`,{
             method:'DELETE',
             header:{
                 'Content-Type':'application/json'
@@ -133,7 +133,7 @@ const Dashboard = () => {
 
      } 
     function addcourse(){
-        fetch("http://localhost:8000/add_course",{
+        fetch("https://student-manageent-system-123.herokuapp.com/add_course",{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

@@ -7,7 +7,8 @@ function Alogin(){
       });
   
     function handlelogin(){
-        fetch("http://localhost:8000/auth_admin",{
+      
+        fetch("https://student-manageent-system-123.herokuapp.com/auth_admin",{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

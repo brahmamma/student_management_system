@@ -10,7 +10,7 @@ const Register = () => {
 
     function handleRegister(){
 
-        fetch("http://localhost:8000/reg_student",{
+        fetch("https://student-manageent-system-123.herokuapp.com/reg_student",{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
