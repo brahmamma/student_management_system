@@ -8,12 +8,12 @@ function Alogin(){
   
     function handlelogin(){
       
-        fetch("https://student-manageent-system-123.herokuapp.com/auth_admin",{
+        fetch("https://student-management-system-123.herokuapp.com/auth_admin",{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(user) // body data type must match "Content-Type" header
+          body: JSON.stringify(user) 
         })
         .then((res)=>{
           return res.json()

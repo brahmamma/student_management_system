@@ -11,13 +11,13 @@ const Dashboards = () => {
    const[notregcourses,setnotregcourses] = useState([])
    const getData = () =>
    {
-       fetch('https://student-manageent-system-123.herokuapp.com/get_courses')
+       fetch('https://student-management-system-123.herokuapp.com/get_courses')
        .then(res=> res.json())
        .then(data=>setallcourses(data))
    }
    const getRegData = () =>
    {
-       fetch('https://student-manageent-system-123.herokuapp.com/get_regcourses')
+       fetch('https://student-management-system-123.herokuapp.com/get_regcourses')
        .then(res=> res.json())
        .then(data=>{
          console.log(data)
@@ -76,7 +76,7 @@ const Dashboards = () => {
          var obj={c,u}
          e.target.disabled=true
          e.target.innerText="Waiting..."
-         fetch("https://student-manageent-system-123.herokuapp.com/req_course",{
+         fetch("https://student-management-system-123.herokuapp.com/req_course",{
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

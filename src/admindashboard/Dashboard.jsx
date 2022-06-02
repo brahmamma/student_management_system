@@ -11,19 +11,19 @@ const Dashboard = () => {
  
    const getData = () =>
    {
-       fetch('http://localhost:8000/get_courses')
+       fetch('https://student-management-system-123.herokuapp.com/get_courses')
        .then(res=> res.json())
        .then(data=>setallcourses(data))
    }
    const getDummyRegisters = () =>
    {
-       fetch('http://localhost:8000/get_dummyregisters')
+       fetch('https://student-management-system-123.herokuapp.com/get_dummyregisters')
        .then(res=> res.json())
        .then(data=>setdummyregisters(data))
    }
    const getDummyCourseRegisters = () =>
    {
-       fetch('http://localhost:8000/get_dummycourseregisters')
+       fetch('https://student-management-system-123.herokuapp.com/get_dummycourseregisters')
        .then(res=> res.json())
        .then(data=>setdummycourseregisters(data))
    }
@@ -72,7 +72,7 @@ const Dashboard = () => {
         
     }
     function handledelete(obj){
-        fetch(`https://student-manageent-system-123.herokuapp.com/del_reg_request/${obj._id}`,{
+        fetch(`https://student-management-system-123.herokuapp.com/del_reg_request/${obj._id}`,{
             method:'DELETE',
             header:{
                 'Content-Type':'application/json'
@@ -81,7 +81,7 @@ const Dashboard = () => {
         
     }
     function handleapprove(obj){
-        fetch('https://student-manageent-system-123.herokuapp.com/add_registers',{
+        fetch('https://student-management-system-123.herokuapp.com/add_registers',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -90,7 +90,7 @@ const Dashboard = () => {
         })
         .then(res=>res.json())
         .then((data)=>{
-            fetch(`https://student-manageent-system-123.herokuapp.com/del_reg_request/${obj._id}`,{
+            fetch(`https://student-management-system-123.herokuapp.com/del_reg_request/${obj._id}`,{
             method:'DELETE',
             header:{
                 'Content-Type':'application/json'
@@ -102,7 +102,7 @@ const Dashboard = () => {
      )
     }
      function handleapprovecourse(obj){
-        fetch('https://student-manageent-system-123.herokuapp.com/add_registerdcourses',{
+        fetch('https://student-management-system-123.herokuapp.com/add_registerdcourses',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -111,7 +111,7 @@ const Dashboard = () => {
         })
         .then(res=>res.json())
         .then((data)=>{
-            fetch(`https://student-manageent-system-123.herokuapp.com/del_cou_reg_request/${obj._id}`,{
+            fetch(`https://student-management-system-123.herokuapp.com/del_cou_reg_request/${obj._id}`,{
             method:'DELETE',
             header:{
                 'Content-Type':'application/json'
@@ -124,7 +124,7 @@ const Dashboard = () => {
 
      } 
      function handledeletecourse(obj){
-        fetch(`https://student-manageent-system-123.herokuapp.com/del_cou_reg_request/${obj._id}`,{
+        fetch(`https://student-management-system-123.herokuapp.com/del_cou_reg_request/${obj._id}`,{
             method:'DELETE',
             header:{
                 'Content-Type':'application/json'
@@ -133,7 +133,7 @@ const Dashboard = () => {
 
      } 
     function addcourse(){
-        fetch("https://student-manageent-system-123.herokuapp.com/add_course",{
+        fetch("https://student-management-system-123.herokuapp.com/add_course",{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
