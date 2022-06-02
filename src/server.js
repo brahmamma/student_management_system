@@ -226,4 +226,4 @@ app.post("/auth_admin", function (req, res) {
                 })
             })
 
-app.listen(process.env.PORT||8000,function(){console.log("server on port 8000")})
+app.listen(process.env.PORT)
